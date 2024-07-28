@@ -39,7 +39,7 @@ void season(int Year, int Month, int Date) {
         }
     }
     else if (Month == 2) {
-        if ((Year % 4 == 0 && Year % 400 != 0) || (Year % 400 == 0)) { // 윤년
+        if ((Year % 4 == 0 && Year % 100 != 0) || (Year % 400 == 0)) { // 윤년
             if (Date > 29) {
                 cout << -1;
             }
