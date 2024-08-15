@@ -58,11 +58,11 @@ public:
 		}
 
 		int front_data = head->data;
-		Node* temp = head; 
+		Node* temp = head; // 임시 노드 생성
 		head = head->next;
 
 		if (head != nullptr) {
-			head->prev = nullptr; 
+			head->prev = nullptr; // head의 prev를 nullptr로 설정
 		}
 
 		delete temp;
@@ -70,7 +70,6 @@ public:
 
 		cout << front_data << endl;
 	}
-};
 
 	void pop_back() {
 		if (size == 0) {
