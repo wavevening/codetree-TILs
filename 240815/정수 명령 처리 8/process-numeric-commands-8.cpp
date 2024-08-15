@@ -58,14 +58,19 @@ public:
 		}
 
 		int front_data = head->data;
+		Node* temp = head; 
 		head = head->next;
 
-		delete head->prev;
-		head->prev = nullptr;
+		if (head != nullptr) {
+			head->prev = nullptr; 
+		}
+
+		delete temp;
 		size--;
 
 		cout << front_data << endl;
 	}
+};
 
 	void pop_back() {
 		if (size == 0) {
